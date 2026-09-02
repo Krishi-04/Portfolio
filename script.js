@@ -24,25 +24,6 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  /* ---- Gentle rise-in for section blocks ---- */
-  try {
-    var targets = document.querySelectorAll(
-      ".section-title, .section-lead, .prob-list li, .prob-kicker, .proc li, .facts, .case, .chips li, .caps-kicker, .close-text > *, .hero-inner > *"
-    );
-    if ("IntersectionObserver" in window && targets.length) {
-      var revealAll = function () { targets.forEach(function (el) { el.classList.add("in"); }); };
-      targets.forEach(function (el) { el.classList.add("rise"); });
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) { entry.target.classList.add("in"); obs.unobserve(entry.target); }
-        });
-      }, { rootMargin: "0px 0px -6% 0px", threshold: 0.06 });
-      targets.forEach(function (el) { obs.observe(el); });
-      setTimeout(revealAll, 900);           // safety net
-      window.addEventListener("load", revealAll);
-    }
-  } catch (e) { /* animation is optional — ignore */ }
-
   /* ---- Active nav link ---- */
   var navLinks = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
   var map = navLinks
