@@ -1,0 +1,10 @@
+node_modules/
+
+# internal working notes — not for the public repo
+content-draft.md
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

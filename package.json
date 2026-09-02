@@ -1,0 +1,15 @@
+{
+  "name": "krishi-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Krishi Jain — custom business software portfolio (static site)",
+  "scripts": {
+    "start": "serve -s . -l ${PORT:-3000}"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
