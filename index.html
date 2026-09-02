@@ -7,12 +7,13 @@
 <meta name="description" content="Krishi Jain builds custom software around how your business already works — your terms, your numbers, your reports. Mumbai." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,650&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
@@ -32,9 +33,10 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero panel-dark" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <h1 class="hero-title">
-        Software that works the way <span class="mark">you already do</span>.
+        Software that works<br />the way <span class="mark">you already do</span>.
       </h1>
       <p class="hero-sub">
         Custom software built around your workflow — your terms, your numbers, your
@@ -46,6 +48,7 @@
       </div>
       <p class="hero-foot">Businesses in Mumbai run day-to-day on software I built for them.</p>
     </div>
+    <a class="scroll-cue" href="#problem" aria-label="Scroll to content"><span></span></a>
   </section>
 
   <!-- ===== PROBLEM ===== -->
@@ -99,10 +102,41 @@
           </blockquote>
           <p class="stack">React · Django · SQL · on the client&rsquo;s own account</p>
         </div>
-        <div class="case-shot"><div class="shot" data-label="Ledgers &amp; reports"></div></div>
+
+        <div class="case-shot">
+          <div class="frame" role="img" aria-label="Screenshot: parties ledger with fine-weight and amount columns and a receivable / payable summary.">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="frame-url">silver-idols.local / ledger</span></div>
+            <div class="mk mk--ledger">
+              <div class="mk-top">
+                <span class="mk-brand">&#9670; Silver&nbsp;Idols</span>
+                <nav class="mk-nav"><a class="is-on">Ledger</a><a>Stock</a><a>Karigars</a><a>Reports</a></nav>
+              </div>
+              <div class="mk-head">
+                <h4>Parties &mdash; Ledger</h4>
+                <div class="mk-seg"><b>All</b><span>Receivable</span><span>Payable</span></div>
+              </div>
+              <div class="mk-stats">
+                <div><span>Receivable</span><b>&#8377;42.6L</b></div>
+                <div><span>Payable</span><b>&#8377;18.2L</b></div>
+                <div class="is-net"><span>Net position</span><b>&#8377;24.4L</b></div>
+              </div>
+              <table class="mk-table">
+                <thead><tr><th>Party</th><th>Last entry</th><th class="num">Fine wt</th><th class="num">Amount</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>Anand Jewellers</td><td>12 Aug</td><td class="num">214.500&nbsp;g</td><td class="num">&#8377;9,80,400</td><td><span class="pill pill--in">Receivable</span></td></tr>
+                  <tr><td>Rajmal Bullion</td><td>10 Aug</td><td class="num">88.200&nbsp;g</td><td class="num">&#8377;4,12,300</td><td><span class="pill pill--in">Receivable</span></td></tr>
+                  <tr><td>Mehta &amp; Sons</td><td>11 Aug</td><td class="num">&mdash;</td><td class="num">&#8377;2,15,000</td><td><span class="pill pill--out">Payable</span></td></tr>
+                  <tr><td>Shah Karigars</td><td>09 Aug</td><td class="num">41.000&nbsp;g</td><td class="num">&#8377;1,64,000</td><td><span class="pill pill--out">Payable</span></td></tr>
+                  <tr><td>Kumar &amp; Co</td><td>08 Aug</td><td class="num">156.750&nbsp;g</td><td class="num">&#8377;7,05,200</td><td><span class="pill pill--in">Receivable</span></td></tr>
+                </tbody>
+              </table>
+              <div class="mk-foot">Balance sheet regenerated live · 2 Sep, 6:14&nbsp;pm</div>
+            </div>
+          </div>
+        </div>
       </article>
 
-      <article class="case">
+      <article class="case case--flip">
         <div class="case-info">
           <span class="case-tag">Accounting</span>
           <h3>Accounting Software</h3>
@@ -115,7 +149,37 @@
           </blockquote>
           <p class="stack">React · Django · automatic backups · on the client&rsquo;s own account</p>
         </div>
-        <div class="case-shot"><div class="shot" data-label="Ledgers &amp; balances"></div></div>
+
+        <div class="case-shot">
+          <div class="frame" role="img" aria-label="Screenshot: a settlement round showing each member's share, amount paid, balance and paid / partial / pending status.">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="frame-url">accounts.local / round&nbsp;4</span></div>
+            <div class="mk mk--round">
+              <div class="mk-top">
+                <span class="mk-brand">&#9678; Accounts</span>
+                <nav class="mk-nav"><a class="is-on">Rounds</a><a>Members</a><a>Pending</a><a>Backup</a></nav>
+              </div>
+              <div class="mk-head">
+                <h4>Round 4 &mdash; 32 members</h4>
+                <span class="pill pill--open">Open</span>
+              </div>
+              <div class="mk-progress">
+                <div class="mk-progress-row"><span>24 of 32 settled</span><b>75%</b></div>
+                <div class="mk-bar"><i style="width:75%"></i></div>
+              </div>
+              <table class="mk-table">
+                <thead><tr><th>Member</th><th>Share</th><th class="num">Amount</th><th class="num">Balance</th><th>State</th></tr></thead>
+                <tbody>
+                  <tr><td>Suresh M.</td><td>1 hand</td><td class="num">&#8377;80,000</td><td class="num">&#8377;0</td><td><span class="pill pill--in">Paid</span></td></tr>
+                  <tr><td>Ramesh T.</td><td>2 hands</td><td class="num">&#8377;1,60,000</td><td class="num">&#8377;0</td><td><span class="pill pill--in">Paid</span></td></tr>
+                  <tr><td>Priya D.</td><td>&frac12; hand</td><td class="num">&#8377;40,000</td><td class="num">&#8377;12,000</td><td><span class="pill pill--part">Partial</span></td></tr>
+                  <tr><td>Anil K.</td><td>1 hand</td><td class="num">&#8377;80,000</td><td class="num">&#8377;80,000</td><td><span class="pill pill--out">Pending</span></td></tr>
+                  <tr><td>Deepa S.</td><td>1 hand</td><td class="num">&#8377;80,000</td><td class="num">&#8377;0</td><td><span class="pill pill--in">Paid</span></td></tr>
+                </tbody>
+              </table>
+              <div class="mk-foot"><span>Collected <b>&#8377;18.4L</b></span><span>Pending <b>&#8377;6.1L</b></span></div>
+            </div>
+          </div>
+        </div>
       </article>
     </div>
   </section>
@@ -140,6 +204,7 @@
 
   <!-- ===== ABOUT + CONTACT ===== -->
   <section class="section panel-dark close" id="contact">
+    <div class="hero-glow hero-glow--btm" aria-hidden="true"></div>
     <div class="wrap close-inner">
       <div class="about-photo">
         <img src="assets/krishi.jpg" alt="Krishi Jain" onerror="this.closest('.about-photo').classList.add('no-img')" />
