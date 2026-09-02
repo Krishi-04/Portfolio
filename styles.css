@@ -281,7 +281,7 @@ a { color: inherit; }
 .caps-kicker { font-family: var(--f-serif); font-size: var(--s-1); margin: 0; opacity: .92; }
 
 /* ---------- Close / about + contact ---------- */
-.close-inner { display: grid; grid-template-columns: 180px 1fr; gap: clamp(24px, 5vw, 60px); align-items: start; }
+.close-inner { display: grid; grid-template-columns: 210px 1fr; gap: clamp(24px, 5vw, 60px); align-items: start; }
 .about-photo {
   position: relative; aspect-ratio: 4/5; border-radius: 14px; overflow: hidden;
   background: #2a251d; border: 1px solid var(--d-line);
