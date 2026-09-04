@@ -1,4 +1,4 @@
-/* Krishi Jain — portfolio interactions (kept deliberately small) */
+/* Krishi Jain — portfolio interactions */
 (function () {
   "use strict";
   document.documentElement.classList.add("js");
@@ -33,17 +33,27 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  /* ---- Reveal the product mockups as they scroll in (the one scoped device) ---- */
+  /* ---- Scroll reveal ---- */
   try {
-    var frames = document.querySelectorAll(".frame");
-    if ("IntersectionObserver" in window && frames.length) {
+    var items = document.querySelectorAll(".reveal");
+    var showAll = function () { items.forEach(function (el) { el.classList.add("in"); }); };
+    if ("IntersectionObserver" in window && items.length) {
+      // stagger siblings that reveal together
+      items.forEach(function (el) {
+        var sibs = el.parentElement ? el.parentElement.querySelectorAll(":scope > .reveal") : [el];
+        var idx = Array.prototype.indexOf.call(sibs, el);
+        if (idx > 0) el.style.setProperty("--rd", Math.min(idx, 4) * 90 + "ms");
+      });
       var obs = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (e.isIntersecting) { e.target.classList.add("in"); obs.unobserve(e.target); }
         });
-      }, { rootMargin: "0px 0px -12% 0px", threshold: 0.15 });
-      frames.forEach(function (f) { obs.observe(f); });
-      setTimeout(function () { frames.forEach(function (f) { f.classList.add("in"); }); }, 1600);
+      }, { rootMargin: "0px 0px -10% 0px", threshold: 0.12 });
+      items.forEach(function (el) { obs.observe(el); });
+      setTimeout(showAll, 1400);           // never leave content hidden
+      window.addEventListener("load", showAll);
+    } else {
+      showAll();
     }
   } catch (e) { /* motion is optional */ }
 
