@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,650&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=10" />
+<link rel="stylesheet" href="styles.css?v=11" />
 </head>
 <body>
 
@@ -50,21 +50,30 @@
       <h2 class="section-title reveal"><span class="tick"></span>Work</h2>
 
       <!-- Project 1 -->
-      <article class="case">
+      <article class="case" id="case-silver">
         <div class="case-info reveal">
           <span class="case-tag">Accounting &amp; stock</span>
           <h3>Silver Idols Stock</h3>
           <p class="case-cap">Dozens of spreadsheets, now one system.</p>
-          <ul class="io">
-            <li>2&ndash;3 days <b>&rarr;</b> minutes</li>
-            <li>12 sheets <b>&rarr;</b> 1</li>
-            <li>by hand <b>&rarr;</b> automatic</li>
-          </ul>
+          <div class="rings">
+            <div class="ring" data-target="85" style="--target:85">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-track" cx="60" cy="60" r="52"/><circle class="ring-fill" cx="60" cy="60" r="52"/></svg>
+              <span class="ring-num">0%</span><span class="ring-lbl">manual calc removed</span>
+            </div>
+            <div class="ring" data-target="96" style="--target:96">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-track" cx="60" cy="60" r="52"/><circle class="ring-fill" cx="60" cy="60" r="52"/></svg>
+              <span class="ring-num">0%</span><span class="ring-lbl">faster month-end</span>
+            </div>
+            <div class="ring" data-target="100" style="--target:100">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-track" cx="60" cy="60" r="52"/><circle class="ring-fill" cx="60" cy="60" r="52"/></svg>
+              <span class="ring-num">0%</span><span class="ring-lbl">books in one system</span>
+            </div>
+          </div>
           <p class="case-q">&ldquo;It fits the way we actually work.&rdquo; <span>&mdash; Owner</span></p>
         </div>
         <div class="case-shot reveal reveal--frame">
-          <div class="frame" role="img" aria-label="Screenshot: a parties ledger with fine-weight and amount columns and a receivable / payable summary.">
-            <div class="frame-bar"><i></i><i></i><i></i><span class="frame-url">silver-idols.local / ledger</span></div>
+          <div class="frame" role="button" tabindex="0" data-lb="silver" aria-label="Open a closer look at the Silver Idols ledger">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="frame-url">silver-idols.local / ledger</span><span class="frame-open">Open&nbsp;&#8599;</span></div>
             <div class="mk mk--ledger">
               <div class="mk-top">
                 <span class="mk-brand">&#9670; Silver&nbsp;Idols</span>
@@ -96,21 +105,30 @@
       </article>
 
       <!-- Project 2 -->
-      <article class="case case--flip">
+      <article class="case case--flip" id="case-accounts">
         <div class="case-info reveal">
           <span class="case-tag">Accounting</span>
           <h3>Accounting Software</h3>
           <p class="case-cap">Paper books, now current from any phone.</p>
-          <ul class="io">
-            <li>months <b>&rarr;</b> same day</li>
-            <li>hours <b>&rarr;</b> one tap</li>
-            <li>one desk <b>&rarr;</b> any device</li>
-          </ul>
+          <div class="rings">
+            <div class="ring" data-target="97" style="--target:97">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-track" cx="60" cy="60" r="52"/><circle class="ring-fill" cx="60" cy="60" r="52"/></svg>
+              <span class="ring-num">0%</span><span class="ring-lbl">faster to settle a cycle</span>
+            </div>
+            <div class="ring" data-target="90" style="--target:90">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-track" cx="60" cy="60" r="52"/><circle class="ring-fill" cx="60" cy="60" r="52"/></svg>
+              <span class="ring-num">0%</span><span class="ring-lbl">less manual tallying</span>
+            </div>
+            <div class="ring" data-target="100" style="--target:100">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-track" cx="60" cy="60" r="52"/><circle class="ring-fill" cx="60" cy="60" r="52"/></svg>
+              <span class="ring-num">0%</span><span class="ring-lbl">works from any device</span>
+            </div>
+          </div>
           <p class="case-q">&ldquo;Now I just check it from my phone.&rdquo; <span>&mdash; Owner</span></p>
         </div>
         <div class="case-shot reveal reveal--frame">
-          <div class="frame" role="img" aria-label="Screenshot: a settlement round showing each member's share, amount paid, balance and paid / partial / pending status.">
-            <div class="frame-bar"><i></i><i></i><i></i><span class="frame-url">accounts.local / round&nbsp;4</span></div>
+          <div class="frame" role="button" tabindex="0" data-lb="accounts" aria-label="Open a closer look at the settlement round screen">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="frame-url">accounts.local / round&nbsp;4</span><span class="frame-open">Open&nbsp;&#8599;</span></div>
             <div class="mk mk--round">
               <div class="mk-top">
                 <span class="mk-brand">&#9678; Accounts</span>
@@ -141,20 +159,20 @@
       </article>
 
       <!-- Project 3 -->
-      <article class="case">
+      <article class="case" id="case-class">
         <div class="case-info reveal">
           <span class="case-tag">Admin portal · demo</span>
           <h3>Class Admin</h3>
           <p class="case-cap">Everything a 3-branch coaching class runs on.</p>
-          <ul class="io">
-            <li>3 branches</li>
-            <li>6 registers <b>&rarr;</b> 1</li>
-            <li>any browser</li>
+          <ul class="io io--lg">
+            <li><b>3</b> branches, one view</li>
+            <li><b>7</b> modules, one flow</li>
+            <li><b>0</b> install &mdash; any browser</li>
           </ul>
         </div>
         <div class="case-shot reveal reveal--frame">
-          <div class="frame" role="img" aria-label="Screenshot: a coaching-class admin dashboard with quick counts, today's batches and a needs-attention list.">
-            <div class="frame-bar"><i></i><i></i><i></i><span class="frame-url">class-admin.local / dashboard</span></div>
+          <div class="frame" role="button" tabindex="0" data-lb="class" aria-label="Open a closer look at the Class Admin dashboard">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="frame-url">class-admin.local / dashboard</span><span class="frame-open">Open&nbsp;&#8599;</span></div>
             <div class="mk mk--admin">
               <div class="mk-top">
                 <span class="mk-brand">&#9671; Class&nbsp;Admin</span>
@@ -270,6 +288,19 @@
   </div>
 </footer>
 
-<script src="script.js?v=10"></script>
+<dialog class="lb" id="lb" aria-label="Project detail">
+  <button class="lb-x" type="button" data-close aria-label="Close">&times;</button>
+  <div class="lb-inner">
+    <div class="lb-stage" id="lbStage"></div>
+    <div class="lb-side">
+      <span class="lb-tag" id="lbTag"></span>
+      <h3 id="lbTitle"></h3>
+      <ul id="lbPoints"></ul>
+      <p class="lb-note" id="lbNote"></p>
+    </div>
+  </div>
+</dialog>
+
+<script src="script.js?v=11"></script>
 </body>
 </html>
