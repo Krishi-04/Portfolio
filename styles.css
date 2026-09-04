@@ -291,8 +291,36 @@ a { color: inherit; }
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-dk);
   background: var(--accent-sf); padding: 5px 12px; border-radius: 999px;
 }
-.case-info h3 { font-size: var(--s-2); margin-bottom: .5em; }
+.case-info h3 { font-size: var(--s-2); margin-bottom: .7em; }
 .case-info > p { color: var(--ink-2); margin-bottom: 1.5em; max-width: 52ch; }
+
+/* before -> after impact list (a text-light dumbbell) */
+.impact { list-style: none; margin: 0 0 1.3em; padding: 0; display: grid; }
+.impact li {
+  display: grid; grid-template-columns: 1fr auto; gap: 6px 18px; align-items: center;
+  padding: 12px 0; border-bottom: 1px solid var(--line);
+}
+.impact li:first-child { border-top: 1px solid var(--line); }
+.impact-k { font-size: var(--s--1); color: var(--muted); }
+.impact-v { display: flex; align-items: center; gap: 10px; font-size: var(--s-0); white-space: nowrap; }
+.impact-v .was { color: var(--muted); }
+.impact-v .arw { color: color-mix(in srgb, var(--accent) 65%, transparent); font-weight: 600; }
+.impact-v .now { color: var(--accent-dk); font-weight: 600; }
+
+/* single-ratio meter (track = lighter step of the fill's own ramp) */
+.meter { margin: 0 0 1.4em; max-width: 360px; }
+.meter-row { display: flex; justify-content: space-between; gap: 12px; font-size: var(--s--1); color: var(--muted); margin-bottom: 7px; }
+.meter-row b { color: var(--accent-dk); }
+.meter-track { height: 7px; background: var(--accent-sf); border-radius: 999px; overflow: hidden; }
+.meter-track i { display: block; height: 100%; width: var(--v, 0%); background: var(--accent); border-radius: 999px; }
+
+/* compact fact trio (for the demo case) */
+.facts3 { list-style: none; margin: 0 0 1.3em; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.facts3 li {
+  border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px;
+  font-size: var(--s--1); color: var(--muted);
+}
+.facts3 b { display: block; font-family: var(--f-serif); font-size: 1.15rem; color: var(--ink); }
 .testimonial {
   margin: 0 0 1.2em; padding: 4px 0 0 28px; position: relative;
   font-family: var(--f-serif); font-size: var(--s-1); line-height: 1.42; color: var(--ink);
@@ -410,6 +438,10 @@ a { color: inherit; }
   .case { grid-template-columns: 1fr; }
   .case-shot, .case--flip .case-shot { order: -1; }
   .frame, .case--flip .frame { transform: none; }
+}
+@media (max-width: 540px) {
+  .impact li { grid-template-columns: 1fr; gap: 3px; }
+  .impact-v { white-space: normal; }
 }
 @media (max-width: 460px) {
   .mk-nav { display: none; }

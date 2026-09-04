@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,650&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=8" />
+<link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
 
@@ -39,8 +39,7 @@
         Software that works<br />the way <span class="mark">you already do</span>.
       </h1>
       <p class="hero-sub">
-        Custom software built around your workflow — your terms, your numbers, your
-        reports. Not an app you bend your business to fit.
+        Custom software, built around how you already work — not an app you bend your business to fit.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Start a conversation</a>
@@ -56,11 +55,11 @@
     <div class="wrap">
       <h2 class="section-title"><span class="tick"></span>Why off-the-shelf doesn&rsquo;t fit</h2>
       <ul class="prob-list">
-        <li><b>You bought a software.</b> Half the team still keeps a private Excel sheet on the side.</li>
-        <li><b>It doesn&rsquo;t match how you price, calculate or report.</b> So people work around it, by hand.</li>
-        <li><b>You pay every month for features you never touch.</b> The one thing you actually need isn&rsquo;t there.</li>
+        <li><b>Bought the software.</b> Half the team still keeps a private Excel sheet.</li>
+        <li><b>Doesn&rsquo;t fit how you price or report.</b> So people work around it, by hand.</li>
+        <li><b>Paying monthly for features you never touch.</b> The one you need isn&rsquo;t there.</li>
       </ul>
-      <p class="prob-kicker">When software doesn&rsquo;t fit, people improvise — and the numbers stop being trustworthy.</p>
+      <p class="prob-kicker">When the software doesn&rsquo;t fit, the numbers stop being trustworthy.</p>
     </div>
   </section>
 
@@ -69,11 +68,11 @@
     <div class="wrap">
       <h2 class="section-title"><span class="tick"></span>How I work</h2>
       <ol class="proc">
-        <li><span>1</span><p>We talk — once or twice — to learn how your business actually runs.</p></li>
-        <li><span>2</span><p>You get a working draft in days: something real to react to, not a document.</p></li>
-        <li><span>3</span><p>I build it properly — your calculations, the edge cases, the reports you need.</p></li>
-        <li><span>4</span><p>Then I polish the interface so it&rsquo;s fast for your team every day.</p></li>
-        <li><span>5</span><p>Go live — and every change in the first 3 months is free.</p></li>
+        <li><span>1</span><p>We talk — once or twice.</p></li>
+        <li><span>2</span><p>A working draft in days.</p></li>
+        <li><span>3</span><p>Built properly — your maths, your reports.</p></li>
+        <li><span>4</span><p>Polished for daily use.</p></li>
+        <li><span>5</span><p>Live — 3 months of changes free.</p></li>
       </ol>
       <ul class="facts">
         <li>Fixed price, agreed up front</li>
@@ -93,8 +92,15 @@
         <div class="case-info">
           <span class="case-tag">Accounting &amp; stock</span>
           <h3>Silver Idols Stock</h3>
-          <p>Their books lived in dozens of Excel sheets, with month-end totals done by hand.
-          Now it&rsquo;s one system that does the maths on entry and builds the reports itself.</p>
+          <ul class="impact">
+            <li><span class="impact-k">Month-end books</span><span class="impact-v"><span class="was">2–3 days</span><span class="arw">→</span><span class="now">minutes</span></span></li>
+            <li><span class="impact-k">Where the data lives</span><span class="impact-v"><span class="was">dozens of sheets</span><span class="arw">→</span><span class="now">one system</span></span></li>
+            <li><span class="impact-k">Weight &amp; interest maths</span><span class="impact-v"><span class="was">by hand</span><span class="arw">→</span><span class="now">automatic</span></span></li>
+          </ul>
+          <div class="meter">
+            <div class="meter-row"><span>Manual calculation removed</span><b>~85%</b></div>
+            <div class="meter-track"><i style="--v:85%"></i></div>
+          </div>
           <blockquote class="testimonial">
             &ldquo;It fits the way we actually work. Faster, simpler, and it does most of the
             calculation for me.&rdquo;
@@ -140,8 +146,15 @@
         <div class="case-info">
           <span class="case-tag">Accounting</span>
           <h3>Accounting Software</h3>
-          <p>Everything was on paper, and settling the accounts took months. Now the sheets and
-          balances update themselves, and he works from any device.</p>
+          <ul class="impact">
+            <li><span class="impact-k">Settling a cycle</span><span class="impact-v"><span class="was">months</span><span class="arw">→</span><span class="now">same day</span></span></li>
+            <li><span class="impact-k">The pending report</span><span class="impact-v"><span class="was">hours by hand</span><span class="arw">→</span><span class="now">one tap</span></span></li>
+            <li><span class="impact-k">Access</span><span class="impact-v"><span class="was">paper, one desk</span><span class="arw">→</span><span class="now">any device</span></span></li>
+          </ul>
+          <div class="meter">
+            <div class="meter-row"><span>Time to settle the books</span><b>~95% faster</b></div>
+            <div class="meter-track"><i style="--v:95%"></i></div>
+          </div>
           <blockquote class="testimonial">
             &ldquo;Everything was on paper and it took months. Now it&rsquo;s done, and I can
             check it from my phone.&rdquo;
@@ -186,10 +199,16 @@
         <div class="case-info">
           <span class="case-tag">Admin portal</span>
           <h3>Class Admin</h3>
-          <p>A working demo of the back-office system a multi-branch coaching class runs on —
-          batches and timetables, students and fees, attendance, tests with a paper-checking
-          workflow, and paying invigilators and correctors per duty. One place instead of six
-          registers.</p>
+          <ul class="facts3">
+            <li><b>3</b> branches, one view</li>
+            <li><b>6 → 1</b> registers</li>
+            <li><b>0</b> install</li>
+          </ul>
+          <ul class="impact">
+            <li><span class="impact-k">Batches &amp; timetables</span><span class="impact-v"><span class="now">scheduled</span></span></li>
+            <li><span class="impact-k">Students, fees, attendance</span><span class="impact-v"><span class="now">tracked</span></span></li>
+            <li><span class="impact-k">Tests, paper-checking, staff pay</span><span class="impact-v"><span class="now">one flow</span></span></li>
+          </ul>
           <p class="stack">Built as a working demo · runs entirely in the browser</p>
         </div>
 
@@ -259,9 +278,8 @@
       </div>
       <div class="close-text">
         <p class="about-bio">
-          <b>Krishi Jain</b> — software developer, Mumbai. I build business softwares end to end:
-          the interface, the backend, the database, and AI over your own data — for businesses
-          that off-the-shelf software didn&rsquo;t fit.
+          <b>Krishi Jain</b> — software developer, Mumbai. I build business softwares end to
+          end — interface, backend, database, and AI over your own data.
         </p>
         <h2 class="close-title">Tell me how your business runs today.<br />I&rsquo;ll tell you what I&rsquo;d build.</h2>
         <div class="hero-actions">
@@ -281,6 +299,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=8"></script>
+<script src="script.js?v=9"></script>
 </body>
 </html>
