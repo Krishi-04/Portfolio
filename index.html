@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,650&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=7" />
+<link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
 
@@ -87,7 +87,7 @@
   <section class="section work" id="work">
     <div class="wrap">
       <h2 class="section-title"><span class="tick"></span>Recent work</h2>
-      <p class="section-lead">Custom systems for very different businesses — names and figures withheld, screens use sample data.</p>
+      <p class="section-lead">Two client systems and a demo, for very different businesses — names and figures withheld, screens use sample data.</p>
 
       <article class="case">
         <div class="case-info">
@@ -181,6 +181,53 @@
           </div>
         </div>
       </article>
+
+      <article class="case">
+        <div class="case-info">
+          <span class="case-tag">Admin portal</span>
+          <h3>Class Admin</h3>
+          <p>A working demo of the back-office system a multi-branch coaching class runs on —
+          batches and timetables, students and fees, attendance, tests with a paper-checking
+          workflow, and paying invigilators and correctors per duty. One place instead of six
+          registers.</p>
+          <p class="stack">Built as a working demo · runs entirely in the browser</p>
+        </div>
+
+        <div class="case-shot">
+          <div class="frame" role="img" aria-label="Screenshot: a coaching-class admin dashboard with quick counts, today's batches and a needs-attention list.">
+            <div class="frame-bar"><i></i><i></i><i></i><span class="frame-url">class-admin.local / dashboard</span></div>
+            <div class="mk mk--admin">
+              <div class="mk-top">
+                <span class="mk-brand">&#9671; Class&nbsp;Admin</span>
+                <nav class="mk-nav"><a class="is-on">Dashboard</a><a>Batches</a><a>Students</a><a>Attendance</a><a>Fees</a></nav>
+              </div>
+              <div class="mk-head">
+                <h4>Dashboard</h4>
+                <div class="mk-seg"><b>Andheri</b><span>Borivali</span><span>Thane</span></div>
+              </div>
+              <div class="mk-chiprow">
+                <span><b>32</b> students</span>
+                <span><b>8</b> batches</span>
+                <span><b>&#8377;58k</b> fees due</span>
+                <span><b>2</b> papers to collect</span>
+              </div>
+              <div class="mk-sub">Today &mdash; Wed 3 Sep</div>
+              <table class="mk-table">
+                <tbody>
+                  <tr><td>Batch A &middot; IX</td><td>3:15&ndash;5:15&nbsp;pm</td><td class="num">24</td><td><span class="pill pill--part">Attendance due</span></td></tr>
+                  <tr><td>Batch C &middot; X</td><td>9:00&ndash;11:00&nbsp;am</td><td class="num">26</td><td><span class="pill pill--in">Marked</span></td></tr>
+                </tbody>
+              </table>
+              <div class="mk-sub">Needs attention</div>
+              <ul class="mk-alerts">
+                <li>Unit Test 4 papers not collected &mdash; Batch A</li>
+                <li>&#8377;58,000 fees outstanding across 4 students</li>
+                <li>Meena Iyer &mdash; &#8377;680 unpaid for correction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -234,6 +281,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=7"></script>
+<script src="script.js?v=8"></script>
 </body>
 </html>
